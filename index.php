@@ -73,14 +73,14 @@ if (isset($_POST['send'])) {
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'information';
-        $mail->Body    = "Name -$name <br>Email-$email  <br>   phone- $phone <br> message- $msg";
+        $mail->Subject = 'Information Request';
+        $mail->Body    = "Name -$name <br>Email -$email  <br>   phone- $phone <br> message- $msg";
 
 
         $mail->send();
-        echo "<div class= 'success'> Massgae Has Been  Sent ✔ </ div>";
+        echo "<div class= 'success'> The email has been conveyed. ✔ </ div>";
     } catch (Exception $e) {
-        echo "<div class='alert'>massage could't send ✖ </div>";
+        echo "<div class='alert'>Unable to send message ✖ </div>";
     }
 }
 ?>
